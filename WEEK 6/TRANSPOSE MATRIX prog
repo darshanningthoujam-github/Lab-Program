@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+class Matrix
+{
+int m, n, i, j, a[][], t[][];
+void getData()
+{
+Scanner s=new Scanner(System.in);
+System.out.println("enter no. of rows");
+m=s.nextInt();
+System.out.println("enter no. of columns");
+n=s.nextInt();
+a=new int[m][n];
+System.out.println("enter elements of array");
+for(i=0; i<m; i++)
+{
+ for(j=0; j<n; j++)
+  {
+  a[i][j]=s.nextInt();
+  }
+}
+}
+void display()
+{
+System.out.println("array:");
+for(i=0; i<m; i++)
+{
+ for(j=0; j<n; j++)
+  {
+  System.out.print(a[i][j]);
+  }System.out.println("");
+}
+}
+void transpose()
+{
+t= new int[n][m];
+System.out.println("Transpose:");
+for(i=0; i<m; i++)
+{
+ for(j=0; j<n; j++)
+  {
+  t[j][i]=a[i][j];
+  }
+}
+for(i=0; i<n; i++)
+{
+ for(j=0; j<m; j++)
+  {
+  System.out.print(t[i][j]);
+  }System.out.println();
+}
+}
+
+public static void main(String[] args)
+{
+Matrix m=new Matrix();
+m.getData();
+m.display();
+m.transpose();
+}
+}
