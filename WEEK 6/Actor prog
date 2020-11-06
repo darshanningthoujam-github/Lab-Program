@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 class Actor{
-	private int id;
-	private String name;
-	private int no_of_years_exp;
-	private int no_of_movies;
+	 int id;
+	 String name;
+	 int no_of_years_exp;
+	 int no_of_movies;
 	
 	Actor()
 	{
